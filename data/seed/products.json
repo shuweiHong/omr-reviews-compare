@@ -1,0 +1,260 @@
+[
+  {
+    "id": "hubspot",
+    "name": "HubSpot Sales Hub",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/hubspot.com",
+    "ratings": { "ease_of_use": 4.5, "support": 4.3, "value_for_money": 3.9, "features": 4.4 },
+    "pricing_tiers": [
+      { "name": "Free", "price_eur_month": 0 },
+      { "name": "Starter", "price_eur_month": 20 },
+      { "name": "Professional", "price_eur_month": 1470 },
+      { "name": "Enterprise", "price_eur_month": null }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "US"
+    }
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce Sales Cloud",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/salesforce.com",
+    "ratings": { "ease_of_use": 3.8, "support": 4.0, "value_for_money": 3.6, "features": 4.7 },
+    "pricing_tiers": [
+      { "name": "Starter", "price_eur_month": 25 },
+      { "name": "Professional", "price_eur_month": 100 },
+      { "name": "Enterprise", "price_eur_month": 165 },
+      { "name": "Unlimited", "price_eur_month": null }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "ISO 27017", "ISO 27018", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es", "it"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "US"
+    }
+  },
+  {
+    "id": "pipedrive",
+    "name": "Pipedrive",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/pipedrive.com",
+    "ratings": { "ease_of_use": 4.6, "support": 4.2, "value_for_money": 4.4, "features": 4.1 },
+    "pricing_tiers": [
+      { "name": "Essential", "price_eur_month": 14 },
+      { "name": "Advanced", "price_eur_month": 34 },
+      { "name": "Professional", "price_eur_month": 49 },
+      { "name": "Enterprise", "price_eur_month": 79 }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es", "pt", "nl"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "EE"
+    }
+  },
+  {
+    "id": "zoho-crm",
+    "name": "Zoho CRM",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/zoho.com",
+    "ratings": { "ease_of_use": 4.0, "support": 3.7, "value_for_money": 4.5, "features": 4.3 },
+    "pricing_tiers": [
+      { "name": "Standard", "price_eur_month": 14 },
+      { "name": "Professional", "price_eur_month": 23 },
+      { "name": "Enterprise", "price_eur_month": 40 },
+      { "name": "Ultimate", "price_eur_month": 52 }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "ISO 27017", "ISO 27018", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es", "it", "nl"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "IN"
+    }
+  },
+  {
+    "id": "monday-sales-crm",
+    "name": "monday sales CRM",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/monday.com",
+    "ratings": { "ease_of_use": 4.5, "support": 4.4, "value_for_money": 4.1, "features": 4.0 },
+    "pricing_tiers": [
+      { "name": "Basic", "price_eur_month": 12 },
+      { "name": "Standard", "price_eur_month": 17 },
+      { "name": "Pro", "price_eur_month": 28 },
+      { "name": "Enterprise", "price_eur_month": null }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "ISO 27018", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es", "it", "nl"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "IL"
+    }
+  },
+  {
+    "id": "dynamics-365-sales",
+    "name": "Microsoft Dynamics 365 Sales",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/microsoft.com",
+    "ratings": { "ease_of_use": 3.6, "support": 3.9, "value_for_money": 3.7, "features": 4.6 },
+    "pricing_tiers": [
+      { "name": "Professional", "price_eur_month": 60 },
+      { "name": "Enterprise", "price_eur_month": 87 },
+      { "name": "Premium", "price_eur_month": 124 },
+      { "name": "Relationship Sales", "price_eur_month": null }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "ISO 27017", "ISO 27018", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es", "it"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "US"
+    }
+  },
+  {
+    "id": "freshsales",
+    "name": "Freshsales",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/freshworks.com",
+    "ratings": { "ease_of_use": 4.3, "support": 4.1, "features": 4.0 },
+    "pricing_tiers": [
+      { "name": "Free", "price_eur_month": 0 },
+      { "name": "Growth", "price_eur_month": 9 },
+      { "name": "Pro", "price_eur_month": 39 },
+      { "name": "Enterprise", "price_eur_month": 59 }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001", "SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en", "fr", "es"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "IN"
+    }
+  },
+  {
+    "id": "centralstationcrm",
+    "name": "CentralStationCRM",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/centralstationcrm.de",
+    "ratings": { "ease_of_use": 4.7, "support": 4.6, "value_for_money": 4.3 },
+    "pricing_tiers": [
+      { "name": "Team", "price_eur_month": 18 },
+      { "name": "Business", "price_eur_month": 42 },
+      { "name": "Enterprise", "price_eur_month": 99 }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": false,
+      "certifications": [],
+      "gdpr_compliant": true,
+      "languages": ["de"],
+      "api": true,
+      "sso": false,
+      "mobile_app": true,
+      "hq_country": "DE"
+    }
+  },
+  {
+    "id": "close",
+    "name": "Close",
+    "category": "CRM",
+    "logo_url": null,
+    "ratings": { "ease_of_use": 4.4, "support": 4.2, "value_for_money": 4.0, "features": 4.2 },
+    "pricing_tiers": [
+      { "name": "Base", "price_eur_month": 19 },
+      { "name": "Startup", "price_eur_month": 49 },
+      { "name": "Professional", "price_eur_month": 99 },
+      { "name": "Enterprise", "price_eur_month": 139 }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": false,
+      "iso_27001": false,
+      "certifications": ["SOC 2 Type II"],
+      "gdpr_compliant": true,
+      "languages": ["en"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "US"
+    }
+  },
+  {
+    "id": "weclapp",
+    "name": "weclapp CRM",
+    "category": "CRM",
+    "logo_url": "https://logo.clearbit.com/weclapp.com",
+    "ratings": { "ease_of_use": 4.2, "support": 4.3, "value_for_money": 4.4, "features": 4.1 },
+    "pricing_tiers": [
+      { "name": "Basic", "price_eur_month": 26 },
+      { "name": "Advanced", "price_eur_month": 45 },
+      { "name": "Enterprise", "price_eur_month": null }
+    ],
+    "attributes": {
+      "free_trial": true,
+      "hosting": "Cloud",
+      "eu_data_center": true,
+      "iso_27001": true,
+      "certifications": ["ISO 27001"],
+      "gdpr_compliant": true,
+      "languages": ["de", "en"],
+      "api": true,
+      "sso": true,
+      "mobile_app": true,
+      "hq_country": "DE"
+    }
+  }
+]
