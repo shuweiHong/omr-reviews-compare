@@ -4,13 +4,11 @@ Sketch only. No database in this exercise. Cardinalities are what I would defend
 
 ```mermaid
 erDiagram
-    direction TB
-
-    CATEGORY |o--o{ CATEGORY : nests
     VENDOR ||--o{ PRODUCT : publishes
     REVIEWABLE ||--o| PRODUCT : "is a"
     REVIEWABLE ||--o| PARTNER : "is a"
     REVIEWABLE ||--o| EVENT : "is a"
+    CATEGORY |o--o{ CATEGORY : nests
     PRODUCT ||--o{ PRODUCT_CATEGORY : "in"
     CATEGORY ||--o{ PRODUCT_CATEGORY : lists
     REVIEWABLE ||--o{ REVIEW : receives
