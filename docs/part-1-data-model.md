@@ -4,11 +4,13 @@ Sketch only. No database in this exercise. Cardinalities are what I would defend
 
 ```mermaid
 erDiagram
+    direction TB
+
+    CATEGORY |o--o{ CATEGORY : nests
     VENDOR ||--o{ PRODUCT : publishes
     REVIEWABLE ||--o| PRODUCT : "is a"
     REVIEWABLE ||--o| PARTNER : "is a"
     REVIEWABLE ||--o| EVENT : "is a"
-    CATEGORY ||--o{ CATEGORY : nests
     PRODUCT ||--o{ PRODUCT_CATEGORY : "in"
     CATEGORY ||--o{ PRODUCT_CATEGORY : lists
     REVIEWABLE ||--o{ REVIEW : receives
@@ -100,7 +102,7 @@ erDiagram
 ## The four questions
 
 **1. Several categories, and categories may nest.**  
-`CATEGORY.parent_id` is a self-FK (`1:N`, null = root). Products sit in many categories through `PRODUCT_CATEGORY` (`M:N`). Nesting is a tree, not a DAG: one parent keeps breadcrumbs and “CRM → Sales CRM” simple. If a category later needs two parents, replace the FK with a category-edge table.
+`CATEGORY.parent_id` is a nullable self-FK: **0..1 parent**, **0..N children**. Root categories have `parent_id = null`, so the parent side is not mandatory. Products sit in many categories through `PRODUCT_CATEGORY` (`M:N`). Nesting is a tree, not a DAG: at most one parent keeps breadcrumbs and “CRM → Sales CRM” simple. If a category later needs two parents, replace the FK with a category-edge table.
 
 **2. Dimensions differ by category, and stay out of the review.**  
 `RATING_DIMENSION` is the catalogue of what we *can* measure (`lead_management`, `deliverability`, `ease_of_use`). `CATEGORY_DIMENSION` says which of those apply to a category. The review itself is text + who + when. Scores live in `REVIEW_RATING` (`REVIEW 1:N REVIEW_RATING`). Adding a CRM-only dimension does not change the review table. A review also stores `category_id`: HubSpot listed under CRM and Marketing is rated with that page’s dimension set, not a blob of mixed scores. Write path should reject a `REVIEW_RATING` whose dimension is not in that category’s set.
