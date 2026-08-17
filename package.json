@@ -1,0 +1,24 @@
+{
+  "name": "omr-reviews-compare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest run",
+    "lint": "nuxt typecheck"
+  },
+  "dependencies": {
+    "nuxt": "^3.21.11",
+    "vue": "^3.5.40",
+    "vue-router": "^5.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7",
+    "vue-tsc": "^2.2.12"
+  }
+}
