@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { formatEuroPerMonth, overallRating, ratingOrNull } from '../utils/format'
+import { formatCompareHeading, formatEuroPerMonth, overallRating, ratingOrNull } from '../utils/format'
 import type { Product } from '../types/product'
 
 function product(overrides: Partial<Product> = {}): Product {
@@ -42,5 +42,17 @@ describe('missing catalogue data', () => {
     expect(ratingOrNull(missing.ratings.value_for_money)).toBeNull()
     expect(overallRating(missing)).not.toBe(0)
     expect(overallRating(missing)).toBe(4.1)
+  })
+})
+
+describe('formatCompareHeading', () => {
+  it('uses vs for two names and an and-list for three or more', () => {
+    expect(formatCompareHeading(['HubSpot', 'Salesforce'])).toBe('HubSpot vs Salesforce')
+    expect(formatCompareHeading(['HubSpot', 'Salesforce', 'Pipedrive'])).toBe(
+      'HubSpot, Salesforce, and Pipedrive'
+    )
+    expect(formatCompareHeading(['HubSpot', 'Salesforce', 'Pipedrive', 'Close'])).toBe(
+      'HubSpot, Salesforce, Pipedrive, and Close'
+    )
   })
 })

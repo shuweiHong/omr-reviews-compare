@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { MAX_COMPARE, MIN_COMPARE, canOpenCompare, parseIdsParam, toggleSelection } from '../utils/selection'
+import { MAX_COMPARE, MIN_COMPARE, allowedSelectionCopy, canOpenCompare, parseIdsParam, toggleSelection } from '../utils/selection'
 
-const known = ['hubspot', 'salesforce', 'pipedrive', 'close', 'zoho-crm']
+const known = Array.from({ length: MAX_COMPARE + 2 }, (_, i) => `tool-${i}`)
 
 describe('toggleSelection', () => {
   it('adds products until MAX_COMPARE, then blocks the next without changing the list', () => {
@@ -38,10 +38,18 @@ describe('parseIdsParam', () => {
 })
 
 describe('canOpenCompare', () => {
-  it('requires at least two selections', () => {
+  it('requires at least MIN_COMPARE selections and no more than MAX_COMPARE', () => {
     expect(canOpenCompare([])).toBe(false)
-    expect(canOpenCompare(['hubspot'])).toBe(false)
-    expect(canOpenCompare(['hubspot', 'close'])).toBe(true)
-    expect(MIN_COMPARE).toBe(2)
+    expect(canOpenCompare(known.slice(0, MIN_COMPARE - 1))).toBe(false)
+    expect(canOpenCompare(known.slice(0, MIN_COMPARE))).toBe(true)
+    expect(canOpenCompare(known.slice(0, MAX_COMPARE))).toBe(true)
+  })
+})
+
+describe('allowedSelectionCopy', () => {
+  it('mentions both MIN_COMPARE and MAX_COMPARE so UI copy follows the cap', () => {
+    const copy = allowedSelectionCopy()
+    expect(copy).toContain(String(MIN_COMPARE))
+    expect(copy).toContain(String(MAX_COMPARE))
   })
 })

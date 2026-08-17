@@ -7,9 +7,9 @@
     <p v-if="pending" class="txt-body-m-regular text-subtle status">Loading comparison.</p>
 
     <div v-else-if="products.length < MIN_COMPARE" class="empty">
-      <h1 class="txt-headline-l-bold text-main">Pick at least two tools first</h1>
+      <h1 class="txt-headline-l-bold text-main">Pick at least {{ MIN_COMPARE }} tools first</h1>
       <p class="txt-body-m-regular text-subtle empty-copy">
-        A side-by-side view only helps once you have a shortlist. Go back to the CRM list and select 2 or 3 tools.
+        A side-by-side view only helps once you have a shortlist. Go back to the CRM list and select {{ rangeCopy }} tools.
       </p>
       <OmButton class="empty-action" @click="navigateTo('/')">Browse CRM tools</OmButton>
     </div>
@@ -32,7 +32,8 @@
 
 <script setup lang="ts">
 import type { Product } from '~/types/product'
-import { MIN_COMPARE, parseIdsParam, serializeIdsParam } from '~/utils/selection'
+import { formatCompareHeading } from '~/utils/format'
+import { allowedSelectionCopy, MIN_COMPARE, parseIdsParam, serializeIdsParam } from '~/utils/selection'
 
 const route = useRoute()
 const router = useRouter()
@@ -49,12 +50,8 @@ const products = computed(() =>
 )
 const idsQuery = computed(() => (selectedIds.value.length ? { ids: serializeIdsParam(selectedIds.value) } : {}))
 
-const heading = computed(() => {
-  const names = products.value.map((product) => product.name)
-  if (names.length === 2) return `${names[0]} vs ${names[1]}`
-  if (names.length === 3) return `${names[0]}, ${names[1]}, and ${names[2]}`
-  return 'Compare CRM tools'
-})
+const rangeCopy = allowedSelectionCopy()
+const heading = computed(() => formatCompareHeading(products.value.map((product) => product.name)))
 
 function removeFromCompare(id: string) {
   const next = selectedIds.value.filter((item) => item !== id)

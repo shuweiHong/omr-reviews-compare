@@ -26,6 +26,12 @@ export function formatYesNo(value: boolean): string {
   return value ? 'Yes' : 'No'
 }
 
+export function formatCompareHeading(names: readonly string[]): string {
+  if (names.length < 2) return 'Compare CRM tools'
+  if (names.length === 2) return `${names[0]} vs ${names[1]}`
+  return `${names.slice(0, -1).join(', ')}, and ${names[names.length - 1]}`
+}
+
 export function letterMark(name: string): string {
   return name
     .split(/\s+/)

@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { MAX_COMPARE, MIN_COMPARE } from '~/utils/selection'
+import { allowedSelectionCopy, MAX_COMPARE, MIN_COMPARE } from '~/utils/selection'
 
 const props = defineProps<{
   selectedIds: string[]
@@ -49,8 +49,13 @@ const countLabel = computed(() => {
 const helper = computed(() => {
   const count = props.selectedIds.length
   const remaining = MAX_COMPARE - count
-  if (count === 0) return `Pick ${MIN_COMPARE} to ${MAX_COMPARE} CRM tools to line them up side by side.`
-  if (count === 1) return 'Add one more tool. A comparison needs at least two.'
+  const needed = MIN_COMPARE - count
+  if (count === 0) return `Pick ${allowedSelectionCopy()} CRM tools to line them up side by side.`
+  if (count < MIN_COMPARE) {
+    return needed === 1
+      ? `Add one more tool. A comparison needs at least ${MIN_COMPARE}.`
+      : `Add ${needed} more tools. A comparison needs at least ${MIN_COMPARE}.`
+  }
   if (remaining > 0) {
     return remaining === 1
       ? 'Ready to compare. You can still add one more.'

@@ -1,6 +1,12 @@
 export const MAX_COMPARE = 3
 export const MIN_COMPARE = 2
 
+export function allowedSelectionCopy(): string {
+  if (MAX_COMPARE <= MIN_COMPARE) return String(MIN_COMPARE)
+  if (MAX_COMPARE === MIN_COMPARE + 1) return `${MIN_COMPARE} or ${MAX_COMPARE}`
+  return `${MIN_COMPARE} to ${MAX_COMPARE}`
+}
+
 export type ToggleStatus = 'added' | 'removed' | 'blocked'
 
 export interface ToggleResult {
