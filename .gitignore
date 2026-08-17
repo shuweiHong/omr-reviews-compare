@@ -1,0 +1,17 @@
+# Nuxt / Node
+node_modules
+.nuxt
+.output
+.nitro
+.data
+dist
+*.log
+.DS_Store
+.idea
+.vscode
+coverage
+.env
+.env.*
+!.env.example
+*.local
+.cache
