@@ -1,5 +1,6 @@
 <template>
-  <div>
-    <NuxtWelcome />
+  <div class="page-shell">
+    <AppHeader />
+    <NuxtPage />
   </div>
 </template>
