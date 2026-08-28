@@ -3,7 +3,7 @@
     "id": "hubspot",
     "name": "HubSpot Sales Hub",
     "category": "CRM",
-    "logo_url": "/logos/hubspot.png",
+    "logo_url": "https://logo.clearbit.com/hubspot.com",
     "ratings": { "ease_of_use": 4.5, "support": 4.3, "value_for_money": 3.9, "features": 4.4 },
     "pricing_tiers": [
       { "name": "Free", "price_eur_month": 0 },
